@@ -29,7 +29,7 @@ public class ClienteService {
 	}
 
 	public Cliente update(Cliente obj) {
-		Cliente newObj = find(obj.getId());
+		Cliente newObj = find(obj.getId()); //instancia do objeto pelo banco de dados
 		updateData(newObj, obj);
 		return repo.save(newObj);
 	}
